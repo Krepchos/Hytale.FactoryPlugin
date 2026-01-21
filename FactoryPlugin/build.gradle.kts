@@ -13,8 +13,11 @@ dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    compileOnly(files("libs/HytaleServer.jar"))
 }
 
-tasks.test {
-    useJUnitPlatform()
+tasks.jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    from("src/main/resources")
 }

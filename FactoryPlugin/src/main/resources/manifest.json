@@ -1,0 +1,7 @@
+{
+  "Group": "com.krepchos",
+  "Name": "FactoryPlugin",
+  "Version": "1.0.0",
+  "Main": "com.krepchos.factory.FactoryPlugin",
+  "IncludesAssetPack": true
+}
