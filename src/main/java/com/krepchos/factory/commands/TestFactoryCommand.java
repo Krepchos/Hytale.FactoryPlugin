@@ -10,6 +10,7 @@ import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 import com.krepchos.factory.pages.HelloWorldPage;
+import com.krepchos.factory.pages.TextFieldPage;
 
 import javax.annotation.Nonnull;
 
@@ -27,7 +28,7 @@ public class TestFactoryCommand extends AbstractPlayerCommand {
             @Nonnull World world
     ) {
         var player = (Player) store.getComponent(ref, Player.getComponentType());
-        var page = new HelloWorldPage(playerRef);
+        var page = new TextFieldPage(playerRef);
         assert player != null;
         var pageManager = player.getPageManager();
         pageManager.openCustomPage(ref, store, page);
